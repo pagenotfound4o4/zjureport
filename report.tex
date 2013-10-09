@@ -1,0 +1,62 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{zjureport}
+
+\graphicspath{{figures/}}  % 定义所有的eps文件在 figures 子目录下
+\begin{document}           % 开始全文
+
+%论文题目：{中文}
+\zjutitle{浙江大学研究生读书报告模板}
+%作者：{中文姓名}{学号}
+\zjuauthor{徐呵呵}{21300000}
+%指导教师：{导师中文名}
+\zjumentor{王~~~~哈}
+%个人信息：{毕业年份}{专业班级}
+\zjuinfo{2013}{嵌入式软件}
+%学院信息：{学院中文}
+\zjucollege{软件学院}
+%日期：{提交日期}
+\zjudate{二〇一三年十月}
+
+\zjutitlee{Zhejiang University Graduate Student Reading Report ~\XeLaTeX~ Template}
+\zjumajore{Software Engineering}
+\zjuadvisore{Ha Wang}
+\zjuauthore{Hehe Xu}
+\zjudatee{2013.10}
+
+\input{preface/cover}      % 封面
+
+\frontmatter
+
+%%%%%%%%%% 摘要 %%%%%%%%%%
+\pagenumbering{Roman}
+\include{preface/absc}     % 中文摘要
+
+\pagenumbering{Roman}
+\include{preface/abse}     % English Abstract
+
+%%%%%%%%%% 正文 %%%%%%%%%%
+\pagenumbering{Roman}
+\begingroup % 在组内的chapter不换行
+\let\clearpage\relax % chapter之后不换页
+\mainmatter
+% \makeatletter
+\include{body/intros}
+\include{body/figures}
+\include{body/tables}
+\include{body/equations}
+\include{body/others}
+\include{body/conclusion}
+% \makeatother
+\backmatter
+\endgroup % 组结束
+%%%%%%%%%% 参考文献 %%%%%%%%%%
+\clearpage % 显式换页，使书签定位准确
+\bibliography{references/reference}
+\nocite{*}                                   % 若将此命令屏蔽掉，则未引用的文献不会出现在文后的参考文献中。
+
+%%%%%%%%%% 附录 %%%%%%%%%%
+%\appendix
+%\include{appendix/appendix}            % 附录
+
+\end{document}                                  % 结束全文

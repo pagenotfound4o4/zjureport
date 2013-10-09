@@ -1,0 +1,71 @@
+% !Mode:: "TeX:UTF-8"
+%%============================================================
+%% 中文封面
+
+\thispagestyle{empty}
+\pdfbookmark[-1]{\zjutitlec}{zjureportcover}
+\phantomsection \label{zjureportcover}
+\vspace*{4mm}
+% 校名
+\begin{center}
+   \includegraphics[width=83.5mm]{figures/zju}
+\end{center}
+\vspace*{12mm}
+\centerline{\songti\yihao{\reporttitle}}
+% 校徽
+\begin{center}
+  \includegraphics[width=29.6mm]{figures/zjulogo}
+\end{center}
+
+\vspace*{0.0mm}
+\renewcommand{\arraystretch}{1.0}
+\hspace*{12mm} 
+{\fangsong\sanhao{题目}}
+\hspace{6mm} 
+\begin{minipage}[t]{85mm} % 这里建议自行微调
+    \linespread{1.1}{\songti\sanhao\uline{\zjutitlec}}
+\end{minipage}
+\vspace*{1mm}
+\begin{center}
+    \setlength{\arrayrulewidth}{0.5pt}
+    {\fangsong\sihao
+        \renewcommand{\arraystretch}{1}
+        \begin{tabular}{lc}
+            作者姓名\qquad &  \zjuauthornamec \\ \cline{2-2}
+            作者学号\qquad &  \zjuauthorid \\ \cline{2-2}
+            指导教师\qquad &  \zjumentorc\\ \cline{2-2}
+            学科专业\qquad &  \zjumajor \\ \cline{2-2}
+            所在学院\qquad &  \zjucollegec \\ \cline{2-2}
+            提交日期\qquad & \zjusubmitteddatee \\ \cline{2-2}
+        \end{tabular}
+    }
+\end{center}
+
+\clearpage
+
+% English Cover
+
+\thispagestyle{empty}
+\pdfbookmark[-1]{\zjutitlec}{zjureportcover}
+\phantomsection \label{zjureportcover}
+%\vspace*{4mm}
+
+\begin{center}
+    \vspace*{20pt}
+      \normalfont\LARGE \zjuenglishtitle
+    \vskip \stretch{1}
+      \it\Large A Dissertation Submitted to Zhejiang University in partial fulfillment of the requirements for the degree of Master of Engineering
+    \vskip \stretch{1}
+      \normalfont\Large Major Subject: \zjuenglishmajor
+    \vskip 1pt
+      \normalfont\Large Advisor: \zjuenglishadvisor
+    \vskip \stretch{1}
+      \normalfont\Large By
+    \vskip 1pt
+      \normalfont\Large \zjuenglishauthor
+    \vskip 1pt
+      \normalfont\Large Zhejiang University, P.R. China
+    \vskip 1pt
+      \normalfont\Large \zjuenglishdate
+    \vskip \stretch{1}
+\end{center}
